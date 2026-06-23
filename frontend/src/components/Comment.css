@@ -1,0 +1,70 @@
+.comment-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  padding: 8px var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--border-radius-md);
+  animation: slideInRight 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  width: 100%;
+  word-wrap: break-word;
+  border-left: 3px solid transparent;
+}
+
+.comment-wrapper.purchased {
+  background: rgba(37, 244, 238, 0.1);
+  border-left: 3px solid var(--color-secondary);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.comment-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  color: white;
+  flex-shrink: 0;
+}
+
+.comment-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.comment-username {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  font-weight: var(--font-weight-medium);
+}
+
+.comment-text {
+  font-size: var(--font-size-md);
+  color: var(--color-text);
+  margin-top: 2px;
+}
+
+.comment-badge {
+  font-size: 10px;
+  background: var(--color-secondary);
+  color: var(--color-background);
+  padding: 2px 6px;
+  border-radius: var(--border-radius-pill);
+  display: inline-block;
+  margin: 4px 0 2px 0;
+  font-weight: var(--font-weight-bold);
+  width: fit-content;
+}
