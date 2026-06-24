@@ -55,11 +55,14 @@ export const getRandomComment = (id: number) => {
     text = CHAT_COMMENTS[Math.floor(Math.random() * CHAT_COMMENTS.length)];
   }
 
+  const avatarUrl = `https://i.pravatar.cc/150?u=${encodeURIComponent(username)}`;
+
   return {
     id: `comment-${id}`,
     username,
     text,
     color,
+    avatarUrl,
     isPurchased,
   };
 };

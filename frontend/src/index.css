@@ -1,39 +1,58 @@
 :root {
-  --color-primary: #fe2c55;
-  --color-secondary: #25f4ee;
-  --color-background: #000000;
-  --color-surface: #121212;
-  --color-surface-transparent: rgba(255, 255, 255, 0.15);
-  --color-surface-darker: rgba(0, 0, 0, 0.5);
+  /* Brand Colors */
+  --color-primary: #fe2c55; /* TikTok Red - Reserved for primary/live actions */
+  --color-primary-hover: #e0284d;
+  --color-secondary: #25f4ee; /* Cyan - Use sparingly for specific accents */
+  
+  /* Dark Mode Foundation - Pure neutrals & true grays */
+  --color-background: #0f1015; /* Deep background */
+  --color-surface: #1a1c23; /* Elevated surface */
+  --color-surface-hover: #23252e;
+  --color-surface-transparent: rgba(26, 28, 35, 0.7);
+  --color-border: rgba(255, 255, 255, 0.08); /* Subtle border for separation */
+  --color-border-focus: rgba(255, 255, 255, 0.2);
+  
+  /* Text Colors */
   --color-text: #ffffff;
-  --color-text-muted: rgba(255, 255, 255, 0.7);
-  --color-success: #00c35a;
-  --color-danger: #fe2c55;
+  --color-text-muted: #8b8d98; /* Accessible gray */
+  
+  /* Semantic Colors */
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
 
+  /* Typography - Clean Geometric Sans */
   --font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-size-sm: 12px;
-  --font-size-md: 14px;
+  --font-size-xs: 11px;
+  --font-size-sm: 13px;
+  --font-size-md: 15px;
   --font-size-lg: 18px;
   --font-size-xl: 24px;
   --font-size-xxl: 32px;
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
+  --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
+  /* Spacing System */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
   --spacing-xl: 32px;
 
-  --border-radius-sm: 4px;
-  --border-radius-md: 8px;
+  /* Border Radii - Modern & Smooth */
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
   --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
   --border-radius-pill: 9999px;
 
-  --shadow-glow: 0 0 20px rgba(254, 44, 85, 0.5);
-  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+  /* Restrained Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
 }
 
 * {
@@ -49,6 +68,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  line-height: 1.5;
 }
 
 button {
@@ -56,4 +76,9 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+  transition: all 150ms ease; /* Precise, snappy micro-interactions */
+}
+
+input {
+  font-family: inherit;
 }
